@@ -25,7 +25,7 @@ services:
       - 30333:30333
       - 9933:9933
       - 9944:9944
-    command: ["--chain", "${CHAINSPEC}", "--base-path", "/data", "--name", "${NODE_NAME}", "--pruning", "archive", "--alice", "--validator", "--unsafe-rpc-external", "--unsafe-ws-external", "--rpc-cors", "all"]
+    command: ["--chain", "--dev", "--base-path", "/data", "--name", "okok", "--pruning", "archive", "--alice", "--validator", "--unsafe-rpc-external", "--unsafe-ws-external", "--rpc-cors", "all"]
     volumes:
       - ./config:/config
       - ./data/substrate:/data
