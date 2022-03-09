@@ -65,6 +65,15 @@ services:
       - frontend
       - backend
 
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 18080:8080
+    links:
+      - postgres:postgres      
+
 networks:
     backend:
     frontend:
