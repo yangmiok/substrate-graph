@@ -4,7 +4,7 @@ services:
     image: 2075/archiver-substrate:latest
     container_name: archiver
     restart: unless-stopped
-    command: ["-vv", "--config", "${ARCHIVER_CONFIG}", "--spec", "${CHAINSPEC}"]
+    command: ["-vv", "--config", "config/substrate.toml", "--spec", "config/substrate-dev.json"]
     volumes:
       - ./config:/config
       - ./data/substrate/chains/dev/db:/archive/data
